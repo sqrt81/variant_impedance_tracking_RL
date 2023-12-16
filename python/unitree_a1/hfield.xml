@@ -1,0 +1,29 @@
+<mujoco>
+    <include file="a1_torque.xml"/>
+
+    <asset>
+        <hfield name="uneven_terrain" nrow="60" ncol="400" size="10. 1.5 0.1 1."/>
+        <texture type="skybox" builtin="gradient" rgb1="0.8 0.8 0.8" rgb2="1 1 1" width="512" height="3072"/>
+    </asset>
+
+    <worldbody>
+        <light pos="0 0 3" directional="true" castshadow="false" />
+        <geom type="hfield" name="uneven_terrain" hfield="uneven_terrain" pos="9. 0. 0." rgba=".6 .6 .6 1"/>
+        <geom type="box" name="short_obstacle_1" size="0.05 1.5 0.03" pos="2. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_2" size="0.05 1.5 0.03" pos="4. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_3" size="0.05 1.5 0.03" pos="6. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_4" size="0.05 1.5 0.03" pos="8. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_5" size="0.05 1.5 0.03" pos="10. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_6" size="0.05 1.5 0.03" pos="12. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_7" size="0.05 1.5 0.03" pos="14. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="short_obstacle_8" size="0.05 1.5 0.03" pos="16. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_1" size="0.15 1.5 0.03" pos="1. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_2" size="0.15 1.5 0.03" pos="3. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_3" size="0.15 1.5 0.03" pos="5. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_4" size="0.15 1.5 0.03" pos="7. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_5" size="0.15 1.5 0.03" pos="9. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_6" size="0.15 1.5 0.03" pos="11. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_7" size="0.15 1.5 0.03" pos="13. 0 0.03" rgba="1 0 0 1"/>
+        <geom type="box" name="long_obstacle_8" size="0.15 1.5 0.03" pos="15. 0 0.03" rgba="1 0 0 1"/>
+    </worldbody>
+</mujoco>

@@ -1,0 +1,57 @@
+# used to create the object
+name: MujocoA1
+
+physics_engine: ${..physics_engine}
+
+env:
+  numEnvs: ${resolve_default:1024,${...num_envs}}
+  fixPD: False
+
+  clipObservations: 5.0
+  clipActions: 1.0
+  
+  policyDelay: 0.02
+  stepDt: 0.02
+  
+  terrain:
+    max_height: 0.12
+
+  randomCommandVelocityRanges:
+    linear_x: [0., 3.]     # min max [m/s]
+    linear_y: [-0.1, 0.1]     # min max [m/s]
+    yaw: [-0., 0.]          # min max [rad/s]
+    acc: 0.33               # m/s^2
+    period: [0.23, 0.27]     # min max [s]
+    duty_ratio: [0.27, 0.33]
+    #period: [0.5, 0.6]
+    #duty_ratio: [0.5, 0.6]
+    #period: [0.3, 0.35]
+    #duty_ratio: [0.4, 0.45]
+    torso_height: [0.29, 0.31]
+
+  disturb:
+    pushInterval_s: 4.
+    turnInterval_s: 10.
+
+  learn:
+    # rewards
+    linearVelocityXYRewardScale: 3.
+    angularVelocityZRewardScale: 1.
+    heightRewardScale: 0.5
+    torqueRewardScale: -0.001
+    trackingRewardScale: 0.5
+    upRewardScale: 2.
+    frontRewardScale: 2.
+    stayAliveRewardScale: 0.
+    jerkRewardScale: -0.5
+    vjerkRewardScale: -0.5
+
+    # episode length in seconds
+    episodeLength_s: 10
+
+  # set to True if you use camera sensors in the environment
+  enableCameraSensors: False
+
+sim:
+  num_threads: 60
+  use_gpu_pipeline: False

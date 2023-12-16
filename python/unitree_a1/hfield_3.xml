@@ -1,0 +1,14 @@
+<mujoco>
+    <include file="a1_torque.xml"/>
+
+    <asset>
+        <hfield name="uneven_terrain" nrow="60" ncol="400" size="10. 1.5 0.1 1."/>
+        <hfield name="obstacle" nrow="2" ncol="2" size="0.05 1.5 1. 1."/>
+    </asset>
+
+    <worldbody>
+        <light pos="0 0 3" directional="true" castshadow="false" />
+        <geom type="hfield" name="uneven_terrain" hfield="uneven_terrain" pos="9. 0. 0." rgba="0 0 1 1"/>
+        <geom type="hfield" name="obstacle" hfield="obstacle" pos="6. 0. 0." rgba="1 0 0 1"/>
+    </worldbody>
+</mujoco>
