@@ -20,8 +20,8 @@
 - rl_games=1.4.0
 
 ## Build
-`mkdir build && cd build`
-`cmake ..`
+`mkdir build && cd build` \
+`cmake ..` \
 `make`
 
 ## Run
@@ -45,5 +45,5 @@ variable_impedance_RL
 - `converted_models`: Contains two binary model file (converted from .pt model, can be read by  `parallel_sim/eigen_model_from_file.hpp`).
 - `python/`: Contains a python wrapper for the parallel simulation environment(`mujoco_a1.py`).
 - `python/cfg`: Contains configuration of the environment and hyperparameters for RL algorithm.
-- `python/unitrell_a1/`: Contains mujoco model file for Unitree A1 quadrupedal Robot and terrain. The mujoco model for Unitree A1 quadrupedal Robot is copied from [!mujoco_menagerie](https://github.com/deepmind/mujoco_menagerie.git)
+- `python/unitrell_a1/`: Contains mujoco model file for Unitree A1 quadrupedal Robot and terrain. The mujoco model for Unitree A1 quadrupedal Robot is copied from [mujoco_menagerie](https://github.com/deepmind/mujoco_menagerie.git).
 
